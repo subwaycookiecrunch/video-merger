@@ -1,0 +1,33 @@
+Video Merger Application - Test Instructions
+==========================================
+
+To test the video merger application, you'll need:
+
+1. FFmpeg installed and added to your system PATH
+   - Download from: https://ffmpeg.org/download.html
+   - For Windows: Extract the files and add the 'bin' folder to your system PATH
+   - For macOS: Install with Homebrew using 'brew install ffmpeg'
+
+2. A folder with video files (MP4, MKV, or MOV)
+
+3. A PDF file containing the exact filenames of the videos you want to merge
+   (including their extensions), in the order you want them merged
+
+Example PDF content:
+video1.mp4
+scene2.mkv
+clip3.mov
+
+When you run the application:
+1. Select the folder containing your video files
+2. Select the PDF file with the filenames
+3. Choose where to save the merged output
+4. Click "Merge Videos" to start the process
+
+The application will:
+- Extract filenames from your PDF
+- Match them with files in your video folder
+- Copy matching files to a temporary directory with sequential names
+- Create an FFmpeg concat list
+- Merge the videos without re-encoding
+- Save the result to your specified output location
